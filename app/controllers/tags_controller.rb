@@ -1,3 +1,3 @@
-class TagsController < InheritedResources::Base
+class TagsController < ApplicationController
 
 end

@@ -18,4 +18,6 @@ end
 
 gem 'jquery-rails'
 
+gem 'inherited_resources'
+
 gem 'thin'

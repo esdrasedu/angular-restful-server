@@ -1,3 +1,3 @@
-class CategoriesController < InheritedResources::Base
+class CategoriesController < ApplicationController
   
 end

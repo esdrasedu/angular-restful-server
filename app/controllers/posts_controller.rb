@@ -1,3 +1,3 @@
-class PostsController < InheritedResources::Base 
+class PostsController < ApplicationController
   
 end
