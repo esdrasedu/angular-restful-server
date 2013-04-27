@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   
-  respond_to :json
+  respond_to :html, :json
   
   inherit_resources
   
@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     headers['Access-Control-Request-Method'] = '*' 
   end
 
+  def test
+    render
+  end
+  
 end
