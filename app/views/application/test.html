@@ -1,12 +1,15 @@
 <div ng-app="app">
-	{{ users | json}}
+
 </div>
 <script type="text/javascript">
   angular.module('app', ['restful'])
-  .factory('User', ['$restful', function ($restful) {
-    return $restful('/users/:userId', {userId:'@id'});
-  }])
-  .run(function($rootScope, User){
-    $rootScope.users = User.query();
+  .run(function($rootScope, $restful){
+      var User = $restful('/users/:id');
+      var Post = $restful('/posts/:id');
+
+      var user = User.get({id:2}, function(){
+          console.log(Post.query([user]));
+      });
+      //Post.get([parent]);
   });
 </script>

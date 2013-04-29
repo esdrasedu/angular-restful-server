@@ -5,8 +5,11 @@ AngularRestfulServer::Application.routes.draw do
   resources :users do
     resources :posts do
       resources :tags
-      resources :category
+      resources :category, :only => [:get]
     end
-  end  
-  
+  end
+
+  resources :tags
+  resources :category
+
 end

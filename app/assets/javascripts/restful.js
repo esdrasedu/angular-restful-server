@@ -1,136 +1,168 @@
 (function (undefined) {
   angular.module('restful', ['ng']).
-  factory('$restful', ['$http', function($http) {
-      
-      var noop = angular.noop,
-      forEach = angular.forEach,
-      extend = angular.extend,
-      copy = angular.copy,
-      isFunction = angular.isFunction,
-      getter = function(obj, path) {
-        return $parse(path)(obj);
-      };
-  		
-			Object.defineProperty(Array.prototype, 'has', {
-        value: function(value) {
-          var retorno = false;
-          if( this.length ){
-            for( var i = 0; i < this.length; i++ ){
-              if( this[i] == value ){
-                retorno = true;
-                break;
-              }
-            }
-          }
-          return retorno;
-        }
-      });
-    
+  factory('$route', function($http, $parse) {
+
+      var forEach = angular.forEach;
+
       function encodeUriSegment(val) {
-      	return encodeUriQuery(val, true).
-          replace(/%26/gi, '&').
-          replace(/%3D/gi, '=').
-          replace(/%2B/gi, '+');
+          return encodeUriQuery(val, true).
+              replace(/%26/gi, '&').
+              replace(/%3D/gi, '=').
+              replace(/%2B/gi, '+');
       }
-  
+
       function encodeUriQuery(val, pctEncodeSpaces) {
-        return encodeURIComponent(val).
-          replace(/%40/gi, '@').
-          replace(/%3A/gi, ':').
-          replace(/%24/g, '$').
-          replace(/%2C/gi, ',').
-          replace(/%20/g, (pctEncodeSpaces ? '%20' : '+'));
+          return encodeURIComponent(val).
+              replace(/%40/gi, '@').
+              replace(/%3A/gi, ':').
+              replace(/%24/g, '$').
+              replace(/%2C/gi, ',').
+              replace(/%20/g, (pctEncodeSpaces ? '%20' : '+'));
       }
-  
-      function Route(template, defaults) {
-        this.template = template = template + '#';
-        this.defaults = defaults || {};
-        this.urlParams = {};
+
+      function RouteFactory(template, defaults) {
+          this.template = template = template + '#';
+          this.defaults = defaults || {};
+          this.urlParams = {};
       }
-  
-      Route.prototype = {
-        setUrlParams: function(config, params, actionUrl) {
-          var self = this,
-            url = actionUrl || self.template,
-            val,
-            encodedVal;
-    
-          var urlParams = self.urlParams = {};
-          forEach(url.split(/\W/), function(param){
-            if (param && (new RegExp("(^|[^\\\\]):" + param + "(\\W|$)").test(url))) {
-              urlParams[param] = true;
-            }
-          });
-          url = url.replace(/\\:/g, ':');
-    
-          params = params || {};
-          forEach(self.urlParams, function(_, urlParam){
-            val = params.hasOwnProperty(urlParam) ? params[urlParam] : self.defaults[urlParam];
-            if (angular.isDefined(val) && val !== null) {
-              encodedVal = encodeUriSegment(val);
-              url = url.replace(new RegExp(":" + urlParam + "(\\W|$)", "g"), encodedVal + "$1");
-            } else {
-              url = url.replace(new RegExp("(\/?):" + urlParam + "(\\W|$)", "g"), function(match, leadingSlashes, tail) {
-                if (tail.charAt(0) == '/') {
-                  return tail;
-                } else {
-                  return leadingSlashes + tail;
-                }
+
+      RouteFactory.prototype = {
+          getUrl: function(params, actionUrl) {
+              var self = this,
+                  url = actionUrl || self.template,
+                  val,
+                  encodedVal;
+
+              var urlParams = self.urlParams = {};
+              forEach(url.split(/\W/), function(param){
+                  if (param && (new RegExp("(^|[^\\\\]):" + param + "(\\W|$)").test(url))) {
+                      urlParams[param] = true;
+                  }
               });
-            }
-          });
-    
-          // set the url
-          config.url = url.replace(/\/?#$/, '').replace(/\/*$/, '');
-    
-          // set params - delegate param encoding to $http
-          forEach(params, function(value, key){
-            if (!self.urlParams[key]) {
-              config.params = config.params || {};
-              config.params[key] = value;
-            }
-          });
-        }
+              url = url.replace(/\\:/g, ':');
+
+              params = params || {};
+              forEach(self.urlParams, function(_, urlParam){
+                  val = params.hasOwnProperty(urlParam) ? params[urlParam] : self.defaults[urlParam];
+                  if (angular.isDefined(val) && val !== null) {
+                      encodedVal = encodeUriSegment(val);
+                      url = url.replace(new RegExp(":" + urlParam + "(\\W|$)", "g"), encodedVal + "$1");
+                  } else {
+                      url = url.replace(new RegExp("(\/?):" + urlParam + "(\\W|$)", "g"), function(match, leadingSlashes, tail) {
+                          if (tail.charAt(0) == '/') {
+                              return tail;
+                          } else {
+                              return leadingSlashes + tail;
+                          }
+                      });
+                  }
+              });
+
+              // set the url
+              return (url.replace(/\/?#$/, '').replace(/\/*$/, ''));
+          },
+          getParams: function(params, actionUrl) {
+              var self = this,
+                  url = actionUrl || self.template,
+                  val,
+                  encodedVal;
+
+              var urlParams = self.urlParams = {};
+              forEach(url.split(/\W/), function(param){
+                  if (param && (new RegExp("(^|[^\\\\]):" + param + "(\\W|$)").test(url))) {
+                      urlParams[param] = true;
+                  }
+              });
+              url = url.replace(/\\:/g, ':');
+
+              params = params || {};
+              forEach(self.urlParams, function(_, urlParam){
+                  val = params.hasOwnProperty(urlParam) ? params[urlParam] : self.defaults[urlParam];
+                  if (angular.isDefined(val) && val !== null) {
+                      encodedVal = encodeUriSegment(val);
+                      url = url.replace(new RegExp(":" + urlParam + "(\\W|$)", "g"), encodedVal + "$1");
+                  } else {
+                      url = url.replace(new RegExp("(\/?):" + urlParam + "(\\W|$)", "g"), function(match, leadingSlashes, tail) {
+                          if (tail.charAt(0) == '/') {
+                              return tail;
+                          } else {
+                              return leadingSlashes + tail;
+                          }
+                      });
+                  }
+              });
+
+              var paramsReturn;
+              // set params - delegate param encoding to $http
+              forEach(params, function(value, key){
+                  if (!self.urlParams[key]) {
+                      paramsReturn = paramsReturn || {};
+                      paramsReturn[key] = value;
+                  }
+              });
+              return paramsReturn;
+          }
       };
-  
-  
+      return RouteFactory;
+  }).
+  factory('$restful', ['$http', '$parse', '$route', function($http, $parse, $route) {
+
+      var noop = angular.noop,
+          forEach = angular.forEach,
+          extend = angular.extend,
+          copy = angular.copy,
+          isFunction = angular.isFunction,
+          isArray = angular.isArray,
+          getter = function(obj, path) {
+            return $parse(path)(obj);
+          };
+
+      if( !Array.prototype.hasOwnProperty('has') ){
+          Object.defineProperty(Array.prototype, 'has', {
+              value: function(value) {
+                  var retorno = false;
+                  if( this.length ){
+                      for( var i = 0; i < this.length; i++ ){
+                          if( this[i] == value ){
+                              retorno = true;
+                              break;
+                          }
+                      }
+                  }
+                  return retorno;
+              }
+          });
+      }
+
       function RestfulFactory(url, opts) {
-      
-        var defaultActions = {
-          'get':      {method:'GET'},
-          'query':    {method:'GET', isArray:true},
-          'create':   {method:'POST'},
-          'update':   {method:'PUT'},
-          'destroy':  {method:'DELETE'}
-        };
     
         var optDefault = {
           params:     {},
           actions:    {},
-          only:       [],
-          except:     []
+          only:       null,
+          except:     null
         };
     
         opts = angular.extend({}, optDefault, opts);
-        actions = angular.extend({}, defaultActions, opts.actions);
-        
-        if( opts.only.length ){
-          var newActions = [];
+        actions = angular.extend({}, RestfulFactory.$defaultActions, opts.actions);
+
+        if( isArray(opts.only) ){
+          var newActions = {};
         	forEach(actions, function(value, key){
-            if( !opts.only.has(key) )
-              	newActions.push(value);
+            if( opts.only.has(key) )
+              	newActions[key] = value;
           });
           actions = newActions;
-        } else if( opts.except.length ) {
-          var newActions = [];
+        } else if( isArray(opts.except) ) {
+          var newActions = {};
         	forEach(actions, function(value, key){
-            if( opts.except.has(key) )
-              	newActions.push(value);
+            if( !opts.except.has(key) )
+                newActions[key] = value;
           });
           actions = newActions;
         }
         
-        var route = new Route(url);
+        var route = new $route(url);
     
         function extractParams(data, actionParams){
           var ids = {};
@@ -141,18 +173,21 @@
           });
           return ids;
         }
-    
+
         function Restful(value){
           copy(value || {}, this);
+          this.$getUrl = function(){
+              return route.getUrl(this);
+          };
         }
-    
+
         forEach(actions, function(action, name) {
           action.method = angular.uppercase(action.method);
           var hasBody = action.method == 'POST' || action.method == 'PUT' || action.method == 'PATCH';
           Restful[name] = function(a1, a2, a3, a4, a5) {
             var params = {},
-            		data,
-                resources,
+                data,
+                resources = [],
                 success = noop,
                 error = null,
                 promise;
@@ -174,35 +209,48 @@
                   resources = a3;
                 }
               case 2:
-                if(isFunction(a2))
-                  success = a2;
-                else if(isArray(a2))
+                if(isFunction(a2)){
+                  if(isFunction(a1))
+                    error = a2;
+                  else
+                    success = a2;
+                } else if(isArray(a2)){
                   resources = a2;
-                else
-                	data = a1  
+                } else {
+                  data = a2
+                }
               case 1:
                 if (isFunction(a1)) success = a1;
                 else if (isArray(a1)) resources = a1;
-                else if (hasBody) data = a1;
+                else if (hasBody && !data) data = a1;
                 else params = a1;
               	break;
               case 0: break;
               default:
               	throw "Expected between 0-5 arguments [params, data, resources, success, error], got " + arguments.length + " arguments.";
             }
-    
+
             var value = this instanceof Restful ? this : (action.isArray ? [] : new Restful(data));
             var httpConfig = {},
             promise;
-    
+
             forEach(action, function(value, key) {
               if (key != 'params' && key != 'isArray' ) {
                 httpConfig[key] = copy(value);
               }
             });
             httpConfig.data = data;
-            route.setUrlParams(httpConfig, extend({}, extractParams(data, action.params || {}), params), action.url);
-    
+            var paramsMerge =  extend({}, extractParams(data, action.params || {}), params);
+
+            httpConfig.url = '';
+            forEach(resources, function(restful, index) {
+               if( restful.hasOwnProperty('$getUrl') ){
+                httpConfig.url = httpConfig.url + restful.$getUrl();
+               }
+            });
+            httpConfig.url = httpConfig.url + route.getUrl(paramsMerge, action.url);
+            httpConfig.params = route.getParams(paramsMerge, action.url);
+
             function markResolved() { value.$resolved = true; }
             
             promise = $http(httpConfig);
@@ -223,12 +271,15 @@
                   copy(data, value);
                   value.$then = then;
                   value.$resolved = resolved;
+                  value.$getUrl = function(){
+                    return route.getUrl(data);
+                  };
                 }
               }
     
               (success||noop)(value, response.headers);
     
-              response.Restful = value;
+              response.restful = value;
               return response;
             }, error).then;
     
@@ -277,6 +328,14 @@
         };
     
         return Restful;
+      };
+
+      RestfulFactory.$defaultActions = {
+        'get':      {method:'GET'},
+        'query':    {method:'GET', isArray:true},
+        'create':   {method:'POST'},
+        'update':   {method:'PUT'},
+        'destroy':  {method:'DELETE'}
       };
   
       return RestfulFactory;
