@@ -20,4 +20,6 @@ gem 'jquery-rails'
 
 gem 'inherited_resources'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 gem 'thin'

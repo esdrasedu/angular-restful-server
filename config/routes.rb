@@ -1,16 +1,16 @@
 AngularRestfulServer::Application.routes.draw do
   
-  root :to => 'application#test'
+  root :to => 'application#index'
   
   resources :users do
     resources :posts do
       resources :tags
-      resources :category, :only => [:get]
+      resources :categories, :only => [:get]
     end
   end
 
   resources :tags
-  resources :category
+  resources :categories
 	
   match '/gem' => 'gem#index'
   

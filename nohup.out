@@ -1,0 +1,1011 @@
+=> Booting Thin
+=> Rails 3.2.12 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+>> Thin web server (v1.5.1 codename Straight Razor)
+>> Maximum connections set to 1024
+>> Listening on 0.0.0.0:3000, CTRL+C to stop
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 13:51:11 +0000
+Connecting to database specified by database.yml
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 745ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 13:51:21 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (142.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mEXPLAIN (141.2ms)[0m  EXPLAIN SELECT "users".* FROM "users" 
+EXPLAIN for: SELECT "users".* FROM "users" 
+                        QUERY PLAN
+----------------------------------------------------------
+ Seq Scan on users  (cost=0.00..10.21 rows=70 width=1052)
+(1 row)
+
+Completed 200 OK in 949ms (Views: 50.4ms | ActiveRecord: 794.8ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 13:52:30 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 661ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 13:53:02 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 432ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 13:53:30 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 648ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 13:53:36 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (139.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 143ms (Views: 1.5ms | ActiveRecord: 139.9ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 13:53:54 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 481ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 13:54:20 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (139.8ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 143ms (Views: 1.5ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:06:45 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 627ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:06:50 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (139.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 144ms (Views: 2.3ms | ActiveRecord: 139.9ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:07:04 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 442ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:07:23 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (139.8ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 143ms (Views: 1.5ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:08:51 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 578ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:08:57 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (140.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 144ms (Views: 1.8ms | ActiveRecord: 140.1ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:10:00 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 1438ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:10:07 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (139.8ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 143ms (Views: 1.5ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:15:31 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 593ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:15:38 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (139.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 144ms (Views: 2.1ms | ActiveRecord: 139.8ms)
+
+
+Started GET "/gem" for 189.103.74.75 at 2013-05-21 14:19:19 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 600ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.103.74.75 at 2013-05-21 14:19:22 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (139.7ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 143ms (Views: 1.4ms | ActiveRecord: 139.7ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:34:32 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 639ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:34:46 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (188.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 192ms (Views: 1.6ms | ActiveRecord: 188.5ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:35:21 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 461ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:35:21 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 439ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:37:23 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 680ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:38:01 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 469ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:38:34 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 611ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:38:37 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.5ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:38:45 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 163ms (Views: 1.2ms | ActiveRecord: 160.7ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:39:14 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.9ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.2ms | ActiveRecord: 160.9ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:39:19 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.4ms | ActiveRecord: 160.8ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:41:15 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 163ms (Views: 1.2ms | ActiveRecord: 160.5ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:41:23 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 163ms (Views: 1.1ms | ActiveRecord: 160.6ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:42:06 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 589ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:43:41 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 625ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:43:42 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 459ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:43:59 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 450ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:44:07 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.5ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:44:13 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 430ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:44:22 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.7ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:46:38 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 732ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:46:41 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.6ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.6ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:47:46 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 573ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:47:57 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 689ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:48:01 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.9ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.7ms | ActiveRecord: 160.9ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:48:04 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 163ms (Views: 1.1ms | ActiveRecord: 160.4ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:49:04 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 586ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:49:08 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.7ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:50:59 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 611ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:51:02 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (164.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 168ms (Views: 1.8ms | ActiveRecord: 164.5ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:52:08 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 595ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:52:10 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.6ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:54:01 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 616ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:54:03 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.3ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:54:39 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.6ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 163ms (Views: 1.1ms | ActiveRecord: 160.6ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 14:55:25 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 618ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 14:55:27 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (161.3ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 165ms (Views: 1.5ms | ActiveRecord: 161.3ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 14:55:42 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.3ms)
+
+
+Started OPTIONS "/users/1" for 189.62.43.138 at 2013-05-26 14:56:43 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users/1"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 16:51:27 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 754ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 16:51:30 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.8ms)
+
+
+Started OPTIONS "/users/1" for 189.62.43.138 at 2013-05-26 16:51:45 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users/1"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 16:56:24 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 590ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 16:56:26 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.4ms | ActiveRecord: 160.4ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 16:56:39 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started OPTIONS "/users/1" for 189.62.43.138 at 2013-05-26 16:57:08 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users/1"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started OPTIONS "/users/1" for 189.62.43.138 at 2013-05-26 16:57:11 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users/1"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 16:58:39 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 580ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 16:58:41 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.5ms | ActiveRecord: 160.7ms)
+
+
+Started OPTIONS "/users/1" for 189.62.43.138 at 2013-05-26 16:58:58 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users/1"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started OPTIONS "/gem" for 189.62.43.138 at 2013-05-26 17:03:46 +0000
+Processing by GemController#index as */*
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 607ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:03:48 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started OPTIONS "/gem" for 189.62.43.138 at 2013-05-26 17:05:07 +0000
+Processing by GemController#index as */*
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 652ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 17:11:10 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 612ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 17:11:15 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 164ms (Views: 1.7ms | ActiveRecord: 160.5ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:11:33 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+A server is already running. Check /home/action/workspace/angular-restful-server/tmp/pids/server.pid.
+=> Booting Thin
+=> Rails 3.2.12 application starting in development on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Exiting
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:12:11 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started OPTIONS "/gem" for 189.62.43.138 at 2013-05-26 17:17:00 +0000
+Processing by GemController#index as */*
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 614ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:17:01 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started OPTIONS "/gem" for 189.62.43.138 at 2013-05-26 17:21:17 +0000
+Processing by GemController#index as */*
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 619ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started OPTIONS "/gem" for 189.62.43.138 at 2013-05-26 17:22:53 +0000
+Processing by GemController#index as */*
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 583ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 17:23:54 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 659ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 17:23:57 +0000
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (160.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 164ms (Views: 1.8ms | ActiveRecord: 160.8ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:24:32 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/gem" for 189.62.43.138 at 2013-05-26 17:35:07 +0000
+Processing by GemController#index as JSON
+  Rendered text template (0.0ms)
+Completed 200 OK in 621ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 189.62.43.138 at 2013-05-26 17:35:12 +0000
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (160.8ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mEXPLAIN (160.9ms)[0m  [1mEXPLAIN SELECT "users".* FROM "users" [0m
+EXPLAIN for: SELECT "users".* FROM "users" 
+                        QUERY PLAN
+----------------------------------------------------------
+ Seq Scan on users  (cost=0.00..10.21 rows=70 width=1052)
+(1 row)
+
+Completed 200 OK in 925ms (Views: 9.3ms | ActiveRecord: 912.9ms)
+
+
+Started OPTIONS "/users" for 189.62.43.138 at 2013-05-26 17:35:27 +0000
+
+ActionController::RoutingError (No route matches [OPTIONS] "/users"):
+  actionpack (3.2.12) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.12) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.12) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.12) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.12) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.12) lib/rails/engine.rb:479:in `call'
+  railties (3.2.12) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.12) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.1) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.1) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.1) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.1) lib/thin/connection.rb:54:in `process'
+  thin (1.5.1) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.3) lib/eventmachine.rb:187:in `run'
+  thin (1.5.1) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.1) lib/thin/server.rb:159:in `start'
+  rack (1.4.5) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.5) lib/rack/server.rb:268:in `start'
+  railties (3.2.12) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.12) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.12) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.12) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/action/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+Exiting
