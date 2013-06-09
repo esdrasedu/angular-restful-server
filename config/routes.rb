@@ -11,7 +11,5 @@ AngularRestfulServer::Application.routes.draw do
 
   resources :tags
   resources :categories
-	
-  match '/gem' => 'gem#index'
   
 end
